@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon backend/server.js",
-    "build": "vite build"
+    "build": "cd fronted && npm install && npm run build"
   },
   "keywords": [],
   "author": "Aman",

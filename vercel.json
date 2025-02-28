@@ -5,7 +5,7 @@
       "src": "fronted/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist",
+        "distDir": "fronted/dist",
         "buildCommand": "cd fronted && npm install && npm run build"
       }
     },
@@ -17,11 +17,11 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/server.js"
+      "dest": "/backend/server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "fronted/dist/$1"
+      "dest": "/fronted/dist/$1"
     }
   ]
 }
