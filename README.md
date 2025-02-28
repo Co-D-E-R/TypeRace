@@ -10,6 +10,7 @@ TypeRace is a multiplayer typing game built with React, Vite, and Node.js. Playe
 ```sh
 git clone https://github.com/Co-D-E-R/TypeRace.git
 cd TypeRace
+```
 
 2. Install the dependencies:
 
@@ -24,7 +25,7 @@ npm run build
 npm start
 ```
 
-### Features
+## Features
 
 - [x] Real-time multiplayer typing game
 - [x] Single-player and multiplayer modes
@@ -33,4 +34,6 @@ npm start
 - [x] Dynamic progress bars for multiplayer
 
 
+## License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
