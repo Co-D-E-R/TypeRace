@@ -13,7 +13,7 @@ const server = createServer(app);
 const io = new Server(server, {
     pingTimeout: 60000,
     cors: {
-        origin: ["https://speed-teal.vercel.app/", "http://localhost:3000"], // Replace with your frontend URL
+        origin: "https://typerace-r522.onrender.com/", // Replace with your frontend URL
         methods: ["GET", "POST"],
     },
     path: "/socket.io"
