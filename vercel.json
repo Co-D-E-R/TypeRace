@@ -12,8 +12,13 @@
     {
       "src": "backend/server.js",
       "use": "@vercel/node"
-    }
+    },
+    { "src": "index.html", "use": "@vercel/static" }
+      
+    
+    
   ],
+  "outputDirectory": "fronted/dist",
   "routes": [
     {
       "src": "/socket.io/(.*)",
