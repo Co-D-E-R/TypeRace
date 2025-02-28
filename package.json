@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon backend/server.js",
-    "build": "npm install & npm install --prefix fronted && npm run build --prefix fronted"
+    "build": "npm install & npm install --prefix fronted && npm run build --prefix fronted || cd fronted && npm install && npm run build"
   },
   "keywords": [],
   "author": "Aman",
