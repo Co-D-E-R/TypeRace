@@ -6,6 +6,9 @@ export default defineConfig(
   {
     plugins: [react()],
     server: {
+      build: {
+        outDir: 'dist'
+      },
       proxy: {
         '/api': {
           target: 'http://localhost:3000',
