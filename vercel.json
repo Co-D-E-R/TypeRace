@@ -6,7 +6,7 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "fronted/dist",
-        "buildCommand": "cd fronted && npm install && npm run build"
+        "buildCommand": "npm run build"
       }
     },
     {
