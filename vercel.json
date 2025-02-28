@@ -6,7 +6,7 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "fronted/dist",
-        "buildCommand": "npm run build --prefix fronted"
+        "buildCommand": "cd fronted && npm install && npm run build"
       }
     },
     {
@@ -15,6 +15,10 @@
     }
   ],
   "routes": [
+    {
+      "src": "/socket.io/(.*)",
+      "dest": "/backend/server.js"
+    },
     {
       "src": "/api/(.*)",
       "dest": "/backend/server.js"

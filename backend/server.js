@@ -8,22 +8,20 @@ import { server, app } from "./socketHandler/UsersConnection.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT;
-
+const PORT = process.env.PORT || 3000;
 
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/fronted/dist")));
+app.use(express.static(path.join(__dirname, "../fronted/dist")));
 
 app.use(express.json());
 app.use(cors());
 
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "fronted", "dist", "index.html"));
-})
-
 app.use("/api/words", wordsRoutes);
 
-server.listen(PORT, (req, res) => {
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../fronted/dist", "index.html"));
+});
+
+server.listen(PORT, () => {
     console.log(`Server is Running At http://localhost:${PORT}`.green.bold);
-})
+});
